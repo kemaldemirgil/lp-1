@@ -1,0 +1,67 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.content {
+    height: 100vh;
+}
+
+.darkness {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    background: rgba(48, 29, 67, 0.398);
+    z-index: -1;
+}
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -2;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.navigator {
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.navigator a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 2% 1.5%;
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.intro h3 {
+    color: #ffffff;
+    font-size: 6rem;
+}
+
+.intro p {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
