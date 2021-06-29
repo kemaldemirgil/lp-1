@@ -9,41 +9,63 @@
 }
 
 .darkness {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-    background: rgba(48, 29, 67, 0.398);
+    background: rgba(7, 5, 9, 0.542);
     z-index: -1;
 }
 
 
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    position: absolute;
     min-width: 100%; 
     min-height: 100%;
     z-index: -2;
 }
 
-.logo {
-    display: block;
-    margin: 0 auto;
+.name {
+    font-size: 3rem;
+    color: #ffffff;
+}
+.name span {
+    color: #ff00f7;
 }
 
+
 .navigator {
-    position: relative;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     margin-top: 1rem;
     font-size: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.309);
+    padding: 0% 1% 1% 1%;
+    background-color: #ffffff15;
+    box-shadow: 0px 0px 4px #0000007b;
+    border-radius: 4px;
 }
 
 .navigator a {
     text-decoration: none;
     color: #ffffff;
     margin: 2% 1.5%;
+    background-image: radial-gradient(circle, #ffffff, #ff00f7);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    animation: animatedText 10s infinite alternate-reverse;
+    background-size: 200%;
+    background-position: -100%;
+    font-size: 2rem;
+}
+
+.navigator a:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite
 }
 
 
@@ -54,6 +76,7 @@
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    margin-bottom: -6rem;
 }
 
 .intro h3 {
@@ -65,3 +88,36 @@
     color: #ffffff;
     font-size: 1.5rem;
 }
+
+.intro i {
+    margin-top: 1rem;
+    color: aqua;
+    font-size: 4rem;
+    animation: bounce 2s infinite;
+}
+
+.main {
+    padding: 40%;
+    background-color: aliceblue;
+}
+
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+
+@keyframes animatedText{
+    to{
+      background-position: 100%; 
+    }
+  }
